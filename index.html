@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="src/output.css" />
+        <script src="https://geraintluff.github.io/sha256/sha256.min.js"></script>
+        <script src="src/scripts/qrcodegen-v1.8.0-es6.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+            integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"></script>
+
+        <title>QR Code Generator</title>
+    </head>
+    <body>
+        <div class="flex justify-center items-center h-dvh flex-col gap-5">
+            <h1 class="text-3xl text-[#efede3] font-poppins font-semibold">
+                QR Code Generator
+            </h1>
+
+            <div
+                id="output"
+                class="text-[#efede3] text-xl gap-1 flex flex-col"></div>
+
+            <!-- From Uiverse.io by RashadGhzi -->
+            <div
+                class="w-full max-w-xs p-5 bg-white rounded-lg font-mono border-[0.2em] border-[#d0d0d0]">
+                <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="qr-input"
+                    >Input QR value</label
+                >
+                <input
+                    class="text-sm mb-1.5 custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                    placeholder="QR Header (optional)"
+                    type="text"
+                    id="qr-header" />
+                <input
+                    class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+                    placeholder="Enter text/link here"
+                    type="text"
+                    id="qr-input" />
+                <button
+                    onclick="download()"
+                    class="px-4 py-2 bg-blue-300 hover:bg-blue-400 hover:shadow-lg shadow-sm duration-200 w-full rounded-lg mt-2 text-blue-950/75 font-poppins">
+                    Download
+                    <i class="fa-solid fa-download text-blue-950/75"></i>
+                </button>
+            </div>
+        </div>
+        <script src="src/scripts/main.js"></script>
+    </body>
+</html>
